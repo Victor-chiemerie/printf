@@ -40,7 +40,7 @@ int _printf(const char * const format, ...)
 			break;
 	}
 	va_end(argz);
-	return (count);
+	return (count - 1);
 }
 
 /**
