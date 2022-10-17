@@ -4,7 +4,7 @@
  * _printf - prints a formatted data
  * @format: the identifier
  *
- * Return: returns nothing
+ * Return: the length of the printed string
  */
 int _printf(const char * const format, ...)
 {
@@ -41,22 +41,4 @@ int _printf(const char * const format, ...)
 	}
 	va_end(argz);
 	return (count);
-}
-
-/**
- * _puts - prints the value of the string pointer parameter
- * @str: the String parameter
- *
- * Return: the size of the printed string
- */
-int _puts(char *str)
-{
-	int i;
-	int string_length = strlen(str);
-
-	for (i = 0; i < string_length; i++)
-	{
-		_putchar(str[i]);
-	}
-	return (string_length);
 }
