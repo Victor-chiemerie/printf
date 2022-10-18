@@ -7,27 +7,24 @@
  *
  * Return: the number of digits printed
  */
-int print_number(int val, int num)
+int print_number(int val)
 {
-	int rem;
+	int rem, num = 0;
 
 	if (val < 0)
 	{
 		val = val * -1;
-		_putchar('-');
-		num++;
+		num = num + _putchar('-');
 	}
 	if (val > 9)
 	{
-		num = num + print_number(val / 10, num);
+		num = num + print_number(val / 10);
 		rem = val % 10;
-		_putchar('0' + rem);
-		num++;
+		num = num + _putchar('0' + rem);
 	}
 	else
 	{
-		_putchar('0' + val);
-		num++;
+		num = num + _putchar('0' + val);
 	}
 	return (num);
 }

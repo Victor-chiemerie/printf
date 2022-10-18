@@ -7,8 +7,9 @@
 #include <limits.h>
 
 int _putchar(char c);
-int print_number(int val, int num);
-int _strlen(const char * const str);
+int binary_converter(int number);
+int print_number(int val);
+int _strlen(const char *str);
 int _printf(const char *format, ...);
 int _puts(char *str);
 #endif
