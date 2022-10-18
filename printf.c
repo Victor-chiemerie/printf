@@ -15,7 +15,7 @@ int _printf(const char * const format, ...)
 	va_start(argz, format);
 	while ((format[i]) && (i < word_length))
 	{
-		if ((format[i] == '%') & (format[i + 1] != '%'))
+		if (format[i] == '%')
 		{
 			i++;
 			switch (format[i])
@@ -34,6 +34,13 @@ int _printf(const char * const format, ...)
 					break;
 				case 'd':
 					count = count + print_number(va_arg(argz, int));
+					break;
+				case '%':
+					count = count + _putchar(format[i]);
+					break;
+				default:
+					count = count + _putchar(format[i - 1]);
+					count = count + _putchar(format[i]);
 					break;
 			}
 			i++;
