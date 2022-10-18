@@ -9,7 +9,7 @@
 int _puts(char *str)
 {
 	int i;
-	int string_length = strlen(str);
+	int string_length = _strlen(str);
 
 	for (i = 0; i < string_length; i++)
 	{
