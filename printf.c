@@ -11,7 +11,7 @@ int _printf(const char * const format, ...)
 	va_list argz;
 	int i = 0, count = 0;
 	int value = 0;
-    int word_length = strlen(format);
+	int word_length = strlen(format);
 
 	va_start(argz, format);
 	while ((format[i]) && (i < word_length))
@@ -27,22 +27,22 @@ int _printf(const char * const format, ...)
 				case 's':
 					count = count + _puts(va_arg(argz, char*));
 					break;
-                                case 'i':
+				case 'i':
 					count = count + print_number(va_arg(argz, int), value);
 					break;
 				case 'd':
 					count = count + print_number(va_arg(argz, int), value);
-                                        break;
+					break;
 			}
-				i++;
+			i++;
 		}
-        if (i < word_length)
-        {
-            _putchar(format[i]);
-            count++;
-		    i++;
-        }
-        else break;
+		if (i < word_length)
+		{
+			count = count + _putchar(format[i]);
+			i++;
+		}
+		else
+			break;
 	}
 	va_end(argz);
 	return (count);
