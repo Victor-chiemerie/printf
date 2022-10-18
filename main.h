@@ -8,7 +8,7 @@
 
 int _putchar(char c);
 int print_number(int val, int num);
-int _strlen(char *str);
-int _printf(const char * const format, ...);
+int _strlen(const char * const str);
+int _printf(const char *format, ...);
 int _puts(char *str);
 #endif

@@ -11,7 +11,7 @@ int _printf(const char * const format, ...)
 	va_list argz;
 	int i = 0, count = 0;
 	int value = 0;
-	int word_length = strlen(format);
+	int word_length = _strlen(format);
 
 	va_start(argz, format);
 	while ((format[i]) && (i < word_length))
