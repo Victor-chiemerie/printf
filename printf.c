@@ -21,8 +21,7 @@ int _printf(const char * const format, ...)
 			switch (format[i])
 			{
 				case 'b':
-					/*va_arg(argz, int);*/
-					count = count + binary_converter(98);
+					count = count + binary_converter(va_arg(argz, int));
 					break;
 				case 'c':
 					count = count + _putchar(va_arg(argz, int));

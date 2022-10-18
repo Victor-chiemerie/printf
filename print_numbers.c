@@ -3,13 +3,13 @@
 /**
  * print_number - prints out the value of an integer
  * @val: number to be printed
- * @num: the number of digits printed
  *
  * Return: the number of digits printed
  */
 int print_number(int val)
 {
-	int rem, num = 0;
+	int rem = 0;
+	int num = 0;
 
 	if (val < 0)
 	{
