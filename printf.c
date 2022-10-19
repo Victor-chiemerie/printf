@@ -6,7 +6,7 @@
  *
  * Return: the length of the printed string
  */
-int _printf(const char * const format, ...)
+int _printf(const char *format, ...)
 {
 	va_list argz;
 	int i = 0, count = 0;
@@ -37,6 +37,9 @@ int _printf(const char * const format, ...)
 					break;
 				case '%':
 					count = count + _putchar(format[i]);
+					break;
+				case 'p':
+					count = count + hexa_decimal_converter(va_arg(argz, long int));
 					break;
 				default:
 					count = count + _putchar(format[i - 1]);

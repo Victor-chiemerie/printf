@@ -12,4 +12,5 @@ int print_number(int val);
 int _strlen(const char *str);
 int _printf(const char *format, ...);
 int _puts(char *str);
+int hexa_decimal_converter(long int number);
 #endif
