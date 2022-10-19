@@ -39,7 +39,16 @@ int _printf(const char *format, ...)
 					count = count + _putchar(format[i]);
 					break;
 				case 'p':
-					count = count + hexa_decimal_converter(va_arg(argz, long int));
+					count = count + prints_pointers(va_arg(argz, long int));
+					break;
+				case 'x':
+					count = count + hexa_decimal_converter_small(va_arg(argz, unsigned int));
+					break;
+				case 'X':
+					count = count + hexa_decimal_converter_big(va_arg(argz, unsigned int));
+					break;
+				case 'o':
+					count = count + octal_converter(va_arg(argz, unsigned int));
 					break;
 				default:
 					count = count + _putchar(format[i - 1]);

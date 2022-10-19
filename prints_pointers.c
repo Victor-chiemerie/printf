@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * hexa_decimal_converter - converts decimal to hexa_d
- * @number: the decimal parameter
+ * prints_pointers - prints the address of a pointer variable
+ * @number: the address value
  *
  * Return: the number of characters printed
  */
-int hexa_decimal_converter(long int number)
+int prints_pointers(long int number)
 {
 	int counter = 0, i;
 	char *array;

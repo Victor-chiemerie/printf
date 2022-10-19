@@ -12,5 +12,8 @@ int print_number(int val);
 int _strlen(const char *str);
 int _printf(const char *format, ...);
 int _puts(char *str);
-int hexa_decimal_converter(long int number);
+int prints_pointers(long int number);
+int hexa_decimal_converter_small(unsigned int number);
+int hexa_decimal_converter_big(unsigned int number);
+int octal_converter(unsigned int number);
 #endif
