@@ -13,7 +13,8 @@ int _strlen(const char *str);
 int _printf(const char *format, ...);
 int _puts(char *str);
 int prints_pointers(long int number);
-int hexa_decimal_converter_small(unsigned int number);
-int hexa_decimal_converter_big(unsigned int number);
+int Hexa_small_converter(unsigned int x);
+int Hexa_converter(unsigned int x);
 int octal_converter(unsigned int number);
+int  _unsigned(unsigned int c);
 #endif

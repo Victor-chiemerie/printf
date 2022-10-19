@@ -42,13 +42,16 @@ int _printf(const char *format, ...)
 					count = count + prints_pointers(va_arg(argz, long int));
 					break;
 				case 'x':
-					count = count + hexa_decimal_converter_small(va_arg(argz, unsigned int));
+					count = count + Hexa_small_converter(va_arg(argz, unsigned int));
 					break;
 				case 'X':
-					count = count + hexa_decimal_converter_big(va_arg(argz, unsigned int));
+					count = count + Hexa_converter(va_arg(argz, unsigned int));
 					break;
 				case 'o':
 					count = count + octal_converter(va_arg(argz, unsigned int));
+					break;
+				case 'u':
+					count = count + _unsigned(va_arg(argz, unsigned));
 					break;
 				default:
 					count = count + _putchar(format[i - 1]);
